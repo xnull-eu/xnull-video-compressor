@@ -20,17 +20,53 @@ A desktop application that allows you to compress videos to a specific target si
 1. Make sure you have Python 3.7+ installed
 2. Install FFmpeg on your system:
    - **Windows:**
-     1. Download FFmpeg from [gyan.dev](https://www.gyan.dev/ffmpeg/builds/) (recommended) or [ffmpeg.org](https://ffmpeg.org/download.html)
-     2. For gyan.dev, choose "ffmpeg-git-full.7z" for the full version
-     3. Extract the downloaded archive to a location like `C:\ffmpeg`
-     4. Add FFmpeg to your PATH environment variable:
-        - Right-click on "This PC" or "My Computer" and select "Properties"
-        - Click on "Advanced system settings"
-        - Click the "Environment Variables" button
-        - Under "System variables", find the "Path" variable and click "Edit"
-        - Click "New" and add the path to the FFmpeg bin folder (e.g., `C:\ffmpeg\bin`)
-        - Click "OK" on all dialogs to save changes
-     5. Verify installation by opening Command Prompt and typing `ffmpeg -version`
+     - **Essential Build** (Recommended, works on Windows 7 and above):
+       - **Using Package Managers:**
+         - **WinGet** (pre-installed on Windows 10 21H1 and later):
+           ```
+           winget install "FFmpeg (Essentials Build)"
+           ```
+         - **Chocolatey** ([install Chocolatey first](https://chocolatey.org/install)):
+           ```
+           choco install ffmpeg
+           ```
+       - **Manual Download:**
+         1. Download FFmpeg Essentials from [gyan.dev](https://www.gyan.dev/ffmpeg/builds/)
+         2. Choose "ffmpeg-essentials.7z" for the essential version
+         3. Extract the downloaded archive to a location like `C:\ffmpeg`
+         4. Add FFmpeg to your PATH environment variable:
+            - Right-click on "This PC" or "My Computer" and select "Properties"
+            - Click on "Advanced system settings"
+            - Click the "Environment Variables" button
+            - Under "System variables", find the "Path" variable and click "Edit"
+            - Click "New" and add the path to the FFmpeg bin folder (e.g., `C:\ffmpeg\bin`)
+            - Click "OK" on all dialogs to save changes
+         5. Verify installation by opening Command Prompt and typing `ffmpeg -version`
+     - **Full Build** (only if the Essential build doesn't work for your needs):
+       - **Using Package Managers:**
+         - **Chocolatey**:
+           ```
+           choco install ffmpeg-full
+           ```
+         - **Scoop** ([install Scoop first](https://scoop.sh/)):
+           ```
+           scoop install ffmpeg
+           ```
+         - **WinGet**:
+           ```
+           winget install ffmpeg
+           ```
+       - **Manual Download:**
+         1. Download the full version from [gyan.dev](https://www.gyan.dev/ffmpeg/builds/) (choose "ffmpeg-git-full.7z")
+         2. Extract the downloaded archive to a location like `C:\ffmpeg`
+         3. Add FFmpeg to your PATH environment variable:
+            - Right-click on "This PC" or "My Computer" and select "Properties"
+            - Click on "Advanced system settings"
+            - Click the "Environment Variables" button
+            - Under "System variables", find the "Path" variable and click "Edit"
+            - Click "New" and add the path to the FFmpeg bin folder (e.g., `C:\ffmpeg\bin`)
+            - Click "OK" on all dialogs to save changes
+         4. Verify installation by opening Command Prompt and typing `ffmpeg -version`
    - **macOS:** `brew install ffmpeg`
    - **Linux:** `sudo apt install ffmpeg`
 3. Install the required Python packages:
